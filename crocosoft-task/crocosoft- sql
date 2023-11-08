@@ -1,4 +1,5 @@
-﻿CREATE TABLE user (
+
+CREATE TABLE user (
     id INT PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(255) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
@@ -27,4 +28,5 @@ CONSTRAINT check_date_diff CHECK (DATEDIFF(end_date, start_date) <= 7)
 
     amount_paid DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (customer_id) REFERENCES customers(id)
+    FOREIGN KEY (vehicle_id) REFERENCES vehicles(id)
 );
