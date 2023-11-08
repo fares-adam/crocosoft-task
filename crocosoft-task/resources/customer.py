@@ -1,5 +1,4 @@
 from flask_restful import Resource, reqparse
-import sqlite3
 from flask import request , json
 from models.customer import CustomerModel
 
